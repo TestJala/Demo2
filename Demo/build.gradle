@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'Gradle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
+    testCompile group: 'io.cucumber', name: 'cucumber-java', version: '2.4.0'
+    testCompile group: 'io.cucumber', name: 'cucumber-picocontainer', version: '2.4.0'
+    testCompile group: 'io.cucumber', name: 'cucumber-testng', version: '2.4.0'
+    compile group: 'com.github.2gis.winium', name: 'winium-elements-desktop', version: '0.2.0-1'
+    compile group: 'io.appium', name: 'java-client', version: '6.1.0'
+}
