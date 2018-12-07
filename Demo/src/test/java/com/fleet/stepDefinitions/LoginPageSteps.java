@@ -1,6 +1,7 @@
 package com.fleet.stepDefinitions;
 
 import com.fleet.pages.LoginPage;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
@@ -20,14 +21,18 @@ public class LoginPageSteps{
 
     @When("^I click 'Sign In'$")
     public void i_enter_password_as(){
-        //LoginPage page = new LoginPage(base.driver);
-//        LoginPage page=PageFactory.initElements(driver,LoginPage.class);
         page.ClickSignIn();
-        //base.page.GetInstance(LoginPage.class).ClickSignIn();
     }
 
     @Then("^Login should fail$")
     public void login_should_fail(){
         page.ValidateErrorMessage("Invalid login credentials.");
+    }
+
+    @Given("^User is logged in$")
+    public void user_is_logged_in(){
+        page.SetUsername("Gabriel200");
+        page.SetPassword("Gabriel200");
+        page.ClickSignIn();
     }
 }

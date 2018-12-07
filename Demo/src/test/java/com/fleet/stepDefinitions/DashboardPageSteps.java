@@ -8,7 +8,6 @@ public class DashboardPageSteps{
 
     @Then("^User should be signed in$")
     public void userShouldBeSignedIn(){
-        //DashboardPage page = new DashboardPage(base.driver);
         page.ValidateUserIsSignedIn();
     }
 }
